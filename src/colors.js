@@ -34,6 +34,19 @@ const colors = [
  {
   primary: "darkseagreen",
   second: "#b8ffb8"
+ },
+ {
+  primary: "dodgerblue",
+  second: "#ff8282"
+ },
+ {
+  primary: "darkviolet",
+  second: "#ffcf75"
+ },
+
+ {
+  primary: "lightsalmon",
+  second: "darkturquoise"
  }
 ]
 

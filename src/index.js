@@ -23,7 +23,7 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      idxColor: 0,
+      idxColor: 1,
       quote: 'Hola, para iniciar presiona el boton',
       isquote: false,
     };
@@ -33,7 +33,7 @@ class App extends React.Component {
     axios.get('https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand')      
       .then(response => response.data)
         .then(data => {
-          const randomQuote = Math.floor(Math.random() * 10);
+          const randomQuote = Math.floor(Math.random() * 12);
           const newIdx = Math.floor(Math.random() * 9);
           this.setState({
             quote: data[randomQuote].content.rendered,
