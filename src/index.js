@@ -1,17 +1,33 @@
 import React from 'react';
+import axios from 'axios';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+class Card extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = { quote: '' };
+  }
+
+  newQuote = () => {
+    axios.get('https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand')
+      .then(response => response.content)
+        .then(response => {
+          this.setState({quote: response})
+        });
+  }
+
+  render () {
+    return (
+      <>
+        <h3> {this.state.quote} </h3>
+        <button onClick={this.newQuote}> Hola </button>
+      </>
+    )
+  }
+}
+
+ReactDOM.render (
+  <div className="div"> <Card /> </div>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
