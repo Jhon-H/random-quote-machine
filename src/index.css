@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Patua+One&display=swap');
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -9,6 +11,9 @@ html {
 
 body{
   font-size: 16px; /*1rem : 10px*/  
+  margin: 0;
+  font-family: 'Noto Sans HK', sans-serif;
+  font-family: 'Patua One', sans-serif;
 }
 
 .div {
@@ -16,4 +21,33 @@ body{
   justify-content: center;
   align-items: center;
   background-color: dodgerblue;
+  height: 100vh;
+}
+
+.card-div {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  width: min(65%, 80rem);
+  border-radius: 1rem;
+  background-color: deepskyblue;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  color: rgb(49, 49, 49);
+}
+
+.btn {
+  width: 50%;
+  border: none;
+  margin: 6rem auto 0;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.com {
+  font-weight: bold;
+  font-size: 4rem;
 }
